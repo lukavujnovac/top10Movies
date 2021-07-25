@@ -44,9 +44,24 @@ struct VideoCell: View {
                     .lineLimit(2)
                     .minimumScaleFactor(0.5)
                 
-                Text(video.uploadDate)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
+                HStack {
+                    Text(video.uploadDate)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .padding(.horizontal)
+                        
+                    
+                    HStack {
+                        Image(systemName: "star.circle.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 12, height: 12)
+                        
+                        Text(String(format: "%.1f", video.rating))
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                }
             }
         }
     }
