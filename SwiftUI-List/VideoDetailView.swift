@@ -29,7 +29,7 @@ struct VideoDetailView: View {
                 .padding(.horizontal)
             
             HStack(spacing: 40) {
-                Label(String(format: "%.1f", video.rating), systemImage: "eye.fill")
+                Label(String(format: "%.1f", video.rating), systemImage: "star.circle.fill")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                 
